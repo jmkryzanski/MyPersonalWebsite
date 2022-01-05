@@ -38,7 +38,6 @@ def myblog2(request, id):
             'post': post,
         }
 
-    #return render(request, 'website/myblog.html', context)
     return render(request, 'website/myblog2.html', context)
 
 def addPost(request):
