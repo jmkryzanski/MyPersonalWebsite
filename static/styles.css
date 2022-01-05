@@ -1,0 +1,16 @@
+body{
+    background-color: white;
+}
+
+h1{
+    color: tomato;
+}
+
+.card {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nav-item{
+    text-align: center;
+}

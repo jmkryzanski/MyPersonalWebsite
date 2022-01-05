@@ -1,0 +1,20 @@
+{% extends 'website/base.html' %}
+{% block content %}
+
+<div class="card border-0 text-center">
+    <h1 class="mt-5">Add Post</h1>
+    <form class="card-body text-center" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <label class="mt-5" for="title"></label>
+            {{form.title}}
+            <label class="mt-5" for="author"></label>
+            {{form.author}}
+            <label class="mt-5" for="body"></label>
+            {{form.body}}
+            <input class="btn btn-primary mt-5" type="submit" value="Submit Post"></button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
