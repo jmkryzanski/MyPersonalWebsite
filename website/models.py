@@ -9,3 +9,10 @@ class Post(models.Model):
 
     def __str__(self) -> str:
         return self.title + ' | ' + str(self.author)
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=10000)
+
+    def __str__(self):
+        return str(self.user)

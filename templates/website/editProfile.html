@@ -1,0 +1,18 @@
+{% extends 'website/base.html' %}
+{% block content %}
+
+{{user.profile.bio}}
+
+    <form class="card-body text-center" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <label class="mt-5" for="bio"></label>
+            {{user.profile.bio}}
+            {{form.bio}}
+            <!--<label class="mt-5" for="user"></label>
+            {{form.user}}-->
+            <input class="btn btn-primary mt-5" type="submit" value="Submit Post"></button>
+        </div>
+    </form>
+
+{% endblock %}

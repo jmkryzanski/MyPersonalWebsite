@@ -1,5 +1,6 @@
 from django import forms
-from .models import Post
+from django.forms import fields
+from .models import Post, Profile, User
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -13,5 +14,17 @@ class PostForm(forms.ModelForm):
             'body': forms.Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Body'
+            }),
+        }
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        #fields = '__all__'
+        fields = ('bio',)
+        widgets = {
+            'bio': forms.Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': 'Bio'
             }),
         }
