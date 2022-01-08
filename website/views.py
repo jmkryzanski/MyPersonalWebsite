@@ -118,5 +118,3 @@ def editProfile(request):
     }
     return render(request, 'website/editProfile.html', context)
 
-
-
